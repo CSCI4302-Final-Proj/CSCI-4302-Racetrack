@@ -1,0 +1,6 @@
+<launch>
+
+<!-- launch depth publisher-->
+<node pkg="racecar_final" type="controls.py" name="controls_node" output="screen"/>
+
+</launch>

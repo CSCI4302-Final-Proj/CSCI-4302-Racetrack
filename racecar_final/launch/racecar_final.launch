@@ -1,0 +1,15 @@
+<launch>
+
+<!-- launch camera -->
+<include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+
+<!-- launch depth publisher-->
+<node pkg="racecar_final" type="my_show_center_depth.py" name="my_show_center_depth_node"/>
+
+<!-- launch pololu -->
+<include file="$(find ros_pololu_servo)/launch/pololu_example.launch" />
+
+<!-- run cmd_vel node -->
+<node pkg="ros_pololu_servo" type="cmd_vel.py" name="cmd_vel_node"/>
+
+</launch>

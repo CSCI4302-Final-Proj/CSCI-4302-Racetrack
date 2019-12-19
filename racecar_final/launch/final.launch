@@ -1,0 +1,12 @@
+<launch>
+
+<!-- launch camera -->
+<node pkg="realsense_pack" type="realsense_pack_node" name="realsense_pack_node"/>
+
+<!-- launch pololu -->
+<include file="$(find ros_pololu_servo)/launch/pololu_example.launch" />
+
+<!-- run cmd_vel node -->
+<node pkg="ros_pololu_servo" type="cmd_vel.py" name="cmd_vel_node"/>
+
+</launch>
